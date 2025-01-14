@@ -22,6 +22,9 @@ format:
 	npx prettier . --write
 	npx eslint --fix src test
 
+doc:
+	plantuml doc/*.puml
+
 dev: build
 	npx electron-forge start
 
@@ -58,5 +61,6 @@ version:
 .PHONY: \
 	all clean distclean dist start \
 	check format \
+	doc \
 	dev test unit-tests integration-tests e2e-tests coverage \
 	build prepare version

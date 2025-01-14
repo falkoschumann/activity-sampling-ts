@@ -1,0 +1,18 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+LAYOUT_LEFT_RIGHT()
+
+title "Container Diagram for Activity Sampling System"
+
+Container(main, "Main Process", "", "The main process interacts with the operation system.")
+Container(renderer, "Renderer Process", "", "The renderer process displays the user interface.")
+
+Container_Ext(fileSystem, "File System")
+
+Rel(main, renderer, "Starts and manages", "IPC")
+Rel(renderer, main, "Requests data", "HTTP")
+Rel(main, fileSystem, "Load and store", "CSV file")
+
+SHOW_FLOATING_LEGEND()
+@enduml
