@@ -1,3 +1,5 @@
+// Copyright (c) 2024 Falko Schumann. All rights reserved. MIT license.
+
 /**
  * This file will automatically be loaded by vite and run in the "renderer" context.
  * To learn more about the differences between the "main" and the "renderer" context in

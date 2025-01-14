@@ -1,3 +1,5 @@
+// Copyright (c) 2024 Falko Schumann. All rights reserved. MIT license.
+
 import { app, BrowserWindow } from 'electron';
 import path from 'path';
 import started from 'electron-squirrel-startup';
