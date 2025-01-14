@@ -28,6 +28,7 @@
  * ```
  */
 
+import 'bootstrap/dist/js/bootstrap.esm';
 import './index.css';
 
 console.log(
