@@ -29,7 +29,9 @@
  */
 
 import 'bootstrap/dist/js/bootstrap.esm';
+
 import './index.css';
+import './ui/activity_sampling';
 
 console.log(
   '👋 This message is being logged by "renderer.ts", included via Vite',

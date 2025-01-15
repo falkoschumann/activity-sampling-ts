@@ -28,6 +28,9 @@ doc:
 dev: build
 	npx electron-forge start
 
+dev-web: prepare
+	npx vite
+
 test: build
 	npx vitest run
 
