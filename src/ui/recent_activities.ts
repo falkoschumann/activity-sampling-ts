@@ -6,10 +6,8 @@ import { Component } from './components';
 class RecentActivities extends Component {
   getView(): TemplateResult {
     return html`
-      <h6 class="bg-body-tertiary p-2 sticky-top small">
-        Tuesday, 14. January 2025
-      </h6>
-      <div class="list-group list-group-flush small">
+      <h6 class="bg-body-tertiary p-2 sticky-top">Tuesday, 14. January 2025</h6>
+      <div class="list-group list-group-flush">
         <button
           class="list-group-item list-group-item-action d-flex justify-content-start align-items-start"
         >
@@ -17,7 +15,7 @@ class RecentActivities extends Component {
           <div>
             <div class="ms-2 me-auto">
               <div>Project (Client) Task</div>
-              <small>Notes</small>
+              <small class="text-body-tertiary">Notes</small>
             </div>
           </div>
         </button>

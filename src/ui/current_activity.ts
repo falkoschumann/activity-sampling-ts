@@ -8,7 +8,7 @@ class CurrentActivity extends Component {
     return html`
       <form>
         <div class="mb-2">
-          <label for="client" class="form-label small">Client:</label>
+          <label for="client" class="form-label">Client:</label>
           <input
             type="text"
             id="client"
@@ -17,7 +17,7 @@ class CurrentActivity extends Component {
           />
         </div>
         <div class="mb-2">
-          <label for="project" class="form-label small">Project:</label>
+          <label for="project" class="form-label">Project:</label>
           <input
             type="text"
             id="project"
@@ -26,7 +26,7 @@ class CurrentActivity extends Component {
           />
         </div>
         <div class="mb-2">
-          <label for="task" class="form-label small">Task:</label>
+          <label for="task" class="form-label">Task:</label>
           <input
             type="text"
             id="task"
@@ -35,7 +35,7 @@ class CurrentActivity extends Component {
           />
         </div>
         <div class="mb-2">
-          <label for="notes" class="form-label small">Notes:</label>
+          <label for="notes" class="form-label">Notes:</label>
           <input
             type="text"
             id="notes"

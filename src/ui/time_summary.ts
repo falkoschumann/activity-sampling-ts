@@ -9,19 +9,19 @@ class TimeSummary extends Component {
     return html`
       <div class="d-flex justify-content-center flex-wrap text-center">
         <div class="flex-fill">
-          <div class="small">Hours Today</div>
+          <div>Hours Today</div>
           <div class="fs-5">01:30</div>
         </div>
         <div class="flex-fill">
-          <div class="small">Hours Yesterday</div>
+          <div>Hours Yesterday</div>
           <div class="fs-5">00:00</div>
         </div>
         <div class="flex-fill">
-          <div class="small">Hours this Week</div>
+          <div>Hours this Week</div>
           <div class="fs-5">01:30</div>
         </div>
         <div class="flex-fill">
-          <div class="small">Hours this Month</div>
+          <div>Hours this Month</div>
           <div class="fs-5">01:30</div>
         </div>
       </div>

@@ -22,7 +22,7 @@ class Countdown extends Component {
       >
         <div class="progress-bar" style="width: 75%"></div>
       </div>
-      <div class="text-center small">00:30:00</div>
+      <div class="text-center">00:30:00</div>
     `;
   }
 }
