@@ -4,7 +4,7 @@ import { html } from 'lit-html';
 
 import { Component } from './components';
 
-class Countdown extends Component {
+class CountdownComponent extends Component {
   constructor() {
     super();
     this.style.display = 'block';
@@ -27,4 +27,4 @@ class Countdown extends Component {
   }
 }
 
-window.customElements.define('m-countdown', Countdown);
+window.customElements.define('m-countdown', CountdownComponent);

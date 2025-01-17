@@ -1,9 +1,22 @@
 // Copyright (c) 2024 Falko Schumann. All rights reserved. MIT license.
 
 import { html } from 'lit-html';
+
+import { Activity } from '../domain/recent_activities';
 import { Component } from './components';
 
-class CurrentActivity extends Component {
+class CurrentActivityComponent extends Component {
+  #state?: Activity;
+
+  get state() {
+    return this.#state;
+  }
+
+  set state(value) {
+    this.#state = value;
+    this.updateView();
+  }
+
   getView() {
     return html`
       <form>
@@ -14,6 +27,7 @@ class CurrentActivity extends Component {
             id="client"
             name="client"
             class="form-control form-control-sm"
+            .value=${this.#state?.client ?? ''}
           />
         </div>
         <div class="mb-2">
@@ -23,6 +37,7 @@ class CurrentActivity extends Component {
             id="project"
             name="project"
             class="form-control form-control-sm"
+            .value=${this.#state?.project ?? ''}
           />
         </div>
         <div class="mb-2">
@@ -32,6 +47,7 @@ class CurrentActivity extends Component {
             id="task"
             name="task"
             class="form-control form-control-sm"
+            .value=${this.#state?.task ?? ''}
           />
         </div>
         <div class="mb-2">
@@ -41,6 +57,7 @@ class CurrentActivity extends Component {
             id="notes"
             name="notes"
             class="form-control form-control-sm"
+            .value=${this.#state?.notes ?? ''}
           />
         </div>
         <button type="submit" class="btn btn-primary btn-sm w-100">Log</button>
@@ -49,4 +66,4 @@ class CurrentActivity extends Component {
   }
 }
 
-window.customElements.define('m-current-activity', CurrentActivity);
+window.customElements.define('m-current-activity', CurrentActivityComponent);
