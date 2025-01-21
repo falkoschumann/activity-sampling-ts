@@ -24,7 +24,7 @@
     "@typescript-eslint/eslint-plugin": "~5.62.0",
     "@typescript-eslint/parser": "~5.62.0",
     "electron": "34.0.0",
-    "eslint": "^8.57.1",
+    "eslint": "^9.18.0",
     "eslint-plugin-import": "2.31.0",
     "prettier": "3.4.2",
     "ts-node": "10.9.2",
