@@ -4,11 +4,11 @@ import { html } from 'lit-html';
 
 import { Service } from '../application/service';
 import { RecentActivities } from '../domain/recent_activities';
+import { Component } from './components';
 import './countdown';
 import './current_activity';
 import './recent_activities';
 import './time_summary';
-import { Component } from './components';
 
 class ActivitySamplingComponent extends Component {
   #service = new Service();

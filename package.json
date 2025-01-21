@@ -1,8 +1,16 @@
 {
-  "name": "activity-sampling-ts",
-  "productName": "activity-sampling-ts",
+  "name": "activity-sampling",
+  "productName": "activity-sampling",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "Periodically asks the user about their current activity and logs it for analysis.",
+  "keywords": [
+    "productivity"
+  ],
+  "author": {
+    "name": "Falko Schumann",
+    "email": "falko.schumann@muspellheim.de"
+  },
+  "license": "MIT",
   "main": ".vite/build/main.js",
   "scripts": {
     "start": "electron-forge start",
@@ -10,6 +18,12 @@
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "eslint --ext .ts,.tsx ."
+  },
+  "dependencies": {
+    "bootstrap": "5.3.3",
+    "class-validator": "0.14.1",
+    "electron-squirrel-startup": "1.0.1",
+    "lit-html": "3.2.1"
   },
   "devDependencies": {
     "@electron-forge/cli": "7.6.0",
@@ -23,6 +37,7 @@
     "@electron/fuses": "1.8.0",
     "@typescript-eslint/eslint-plugin": "~5.62.0",
     "@typescript-eslint/parser": "~5.62.0",
+    "@vitest/coverage-v8": "3.0.2",
     "electron": "34.0.0",
     "eslint": "^8.57.1",
     "eslint-plugin-import": "2.31.0",
@@ -31,17 +46,5 @@
     "typescript": "~5.1.6",
     "vite": "6.0.7",
     "vitest": "3.0.2"
-  },
-  "keywords": [],
-  "author": {
-    "name": "Falko Schumann",
-    "email": "falko.schumann@muspellheim.de"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "bootstrap": "5.3.3",
-    "class-validator": "0.14.1",
-    "electron-squirrel-startup": "1.0.1",
-    "lit-html": "3.2.1"
   }
 }

@@ -1,3 +1,5 @@
+// Copyright (c) 2024 Falko Schumann. All rights reserved. MIT license.
+
 import { validateSync } from 'class-validator';
 import { RecentActivities } from '../domain/recent_activities';
 

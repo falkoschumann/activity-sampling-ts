@@ -29,7 +29,7 @@ dev: build
 	npx electron-forge start
 
 dev-web: prepare
-	npx vite
+	npx vite --port 8080
 
 test: build
 	npx vitest run

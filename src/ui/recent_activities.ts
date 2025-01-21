@@ -1,8 +1,9 @@
 // Copyright (c) 2024 Falko Schumann. All rights reserved. MIT license.
 
 import { html, TemplateResult } from 'lit-html';
-import { Component } from './components';
+
 import { WorkingDay } from '../domain/recent_activities';
+import { Component } from './components';
 
 class RecentActivitiesComponent extends Component {
   #state: WorkingDay[] = [];
