@@ -1,6 +1,8 @@
 // Copyright (c) 2024 Falko Schumann. All rights reserved. MIT license.
 
 import { validateSync } from 'class-validator';
+
+import { Duration } from '../domain/duration';
 import { RecentActivities } from '../domain/recent_activities';
 
 export class Service {
@@ -8,7 +10,7 @@ export class Service {
     const recentActivities: RecentActivities = {
       lastActivity: {
         timestamp: new Date('2025-01-17T09:30'),
-        duration: 30 * 60,
+        duration: Duration.ofMinutes(30),
         client: 'ACME Inc.',
         project: 'Foobar',
         task: 'Do something',
@@ -19,7 +21,7 @@ export class Service {
           activities: [
             {
               timestamp: new Date('2025-01-17T09:30'),
-              duration: 30 * 60,
+              duration: Duration.ofMinutes(30),
               client: 'ACME Inc.',
               project: 'Foobar',
               task: 'Do something',
@@ -31,21 +33,21 @@ export class Service {
           activities: [
             {
               timestamp: new Date('2025-01-16T17:00'),
-              duration: 30 * 60,
+              duration: Duration.ofMinutes(30),
               client: 'ACME Inc.',
               project: 'Foobar',
               task: 'Do something',
             },
             {
               timestamp: new Date('2025-01-16T16:30'),
-              duration: 30 * 60,
+              duration: Duration.ofMinutes(30),
               client: 'ACME Inc.',
               project: 'Foobar',
               task: 'Do something',
             },
             {
               timestamp: new Date('2025-01-16T16:00'),
-              duration: 30 * 60,
+              duration: Duration.ofMinutes(30),
               client: 'ACME Inc.',
               project: 'Foobar',
               task: 'Make things',
@@ -55,10 +57,10 @@ export class Service {
         },
       ],
       timeSummary: {
-        hoursToday: 30 * 60,
-        hoursYesterday: 3 * 30 * 60,
-        hoursThisWeek: 4 * 30 * 60,
-        hoursThisMonth: 4 * 30 * 60,
+        hoursToday: Duration.parse('PT30M'),
+        hoursYesterday: Duration.parse('PT1H30M'),
+        hoursThisWeek: Duration.parse('PT2H'),
+        hoursThisMonth: Duration.parse('PT2H'),
       },
     };
     validateSync(recentActivities);

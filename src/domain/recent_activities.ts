@@ -8,11 +8,7 @@ import {
   ValidateNested,
 } from 'class-validator';
 
-// TODO Create class Duration similar to class Date
-// TODO Validate objects
-
-/** A duration in number of seconds. */
-export type Duration = number;
+import { Duration } from './duration';
 
 export class RecentActivities {
   @ValidateNested() readonly lastActivity?: Activity;
@@ -21,8 +17,10 @@ export class RecentActivities {
 }
 
 export class Activity {
+  // TODO Rename to start?
   @IsNotEmpty() @IsDate() timestamp: Date;
 
+  // TODO Use IsDuration instead of IsInt
   @IsNotEmpty() @IsInt() readonly duration: Duration;
 
   @IsNotEmpty() @IsString() readonly client: string;
