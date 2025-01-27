@@ -9,6 +9,7 @@ import './countdown';
 import './current_activity';
 import './recent_activities';
 import './time_summary';
+import { Duration } from '../domain/duration';
 
 class ActivitySamplingComponent extends Component {
   #service = new Service();
@@ -16,10 +17,10 @@ class ActivitySamplingComponent extends Component {
   #state: RecentActivities = {
     workingDays: [],
     timeSummary: {
-      hoursToday: 0,
-      hoursYesterday: 0,
-      hoursThisWeek: 0,
-      hoursThisMonth: 0,
+      hoursToday: Duration.ZERO,
+      hoursYesterday: Duration.ZERO,
+      hoursThisWeek: Duration.ZERO,
+      hoursThisMonth: Duration.ZERO,
     },
   };
 
